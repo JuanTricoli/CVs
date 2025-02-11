@@ -1,16 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mis CVs</title>
-</head>
-<body>
-    <h1>Mis CVs</h1>
-    <ul>
-        <li><a href="qa.html">CV QA Tester</a></li>
-        <li><a href="general.html">CV General</a></li>
-        <li><a href="it.html">CV IT Specialist</a></li>
-    </ul>
-</body>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+      /* Animación y fondo */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(180deg, #2C2C2C 0%, #3F3F3F 100%);
+        background-size: 400% 400%;
+        animation: gradientShift 30s ease-in-out infinite;
+        color: white;
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      /* Contenedor de pantalla completa */
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        animation: fadeInUp 1s ease forwards;
+      }
+      @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Encabezado */
+      .header {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      /* Estilo de botones (similar a .toggle-btn) */
+      .menu-button {
+        display: block;
+        width: 90%;
+        padding: 15px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+      }
+      .menu-button:hover {
+        background: #00ffa2;
+        color: #2C2C2C;
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Mis CVs</h1>
+      </div>
+      <button class="menu-button" onclick="window.location.href='qa.html'">
+        CV QA Tester
+      </button>
+      <button class="menu-button" onclick="window.location.href='general.html'">
+        CV General
+      </button>
+      <button class="menu-button" onclick="window.location.href='it.html'">
+        CV IT Specialist
+      </button>
+    </div>
+  </body>
 </html>
